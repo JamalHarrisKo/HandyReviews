@@ -25,7 +25,7 @@
           <a class="nav-link" href="/register.php">Register/Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/createNewProduct.php">Create New</a>
+          <a class="nav-link" href="/createNewProduct.php">Neues Produkt Hinzufügen</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/displayProduct.php">Produkte Anzeigen</a>

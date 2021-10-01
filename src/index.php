@@ -1,7 +1,7 @@
 <?php session_start() ?>
 <?php include "Assets/header.php" ?>
 <!--Content-->
-<h1>Handy Reviews</h1>
+<h1>Handy Review Forum</h1>
 <div class="content-wrapper">
 
     <div class="flexdiv">

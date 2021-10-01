@@ -29,13 +29,13 @@ CREATE TABLE IF NOT EXISTS rating_values(
     rating_value_value int(1) UNIQUE,
     rating_value_name varchar (10),
     PRIMARY KEY (rating_value_id)
-
-
 );
 CREATE TABLE IF NOT EXISTS ratings (
     rating_id int(10) NOT NULL AUTO_INCREMENT,
     rating_value_id int (10) NOT NULL DEFAULT 0,
     review_id int(10),
+    user_id int(10),
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
     FOREIGN KEY (review_id) REFERENCES reviews(review_id),
     FOREIGN KEY (rating_value_id) REFERENCES rating_values(rating_value_id),
     PRIMARY KEY (rating_id)

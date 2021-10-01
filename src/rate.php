@@ -32,9 +32,20 @@ if (isset($_POST['submit'])) {
     foreach ($result as $rating_value) {
         $rating_value_id = $rating_value['rating_value_id'];
     }
+
     //Add rating to db
-    $stmt = $conn->prepare("INSERT INTO ratings(rating_value_id, review_id) VALUES (?, ?)");
-    $stmt->bind_param("ii", $rating_value_id, $review_id);
+    $user_id = $_SESSION['id']; 
+    //Check if user has already rated the Product
+    $stmt = $conn->prepare("SELECT * FROM ratings WHERE review_id=? AND user_id=? ");
+    $stmt->bind_param("ii", $review_id, $user_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $result_array = $result->fetch_assoc();
+    if(!empty($result_array)){
+        print("<p>review has already been rated...<p><p><strong>Return to <a href='/displayProduct.php'>Produkt Übersicht</a></strong>");exit;
+    }
+    $stmt = $conn->prepare("INSERT INTO ratings(rating_value_id, review_id, user_id) VALUES (?, ?, ?)");
+    $stmt->bind_param("iii", $rating_value_id, $review_id, $user_id);
     if ($stmt->execute()) {
     } else {
         echo "Error: " . $sql . ":-" . mysqli_error($conn);

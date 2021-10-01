@@ -2,7 +2,7 @@
 // Name of the data file
 $filename = 'update.sql';
 // MySQL host
-$mysqlHost = 'testproject_db_1';
+$mysqlHost = 'handyreviews_db_1';
 // MySQL username
 $mysqlUser = 'root';
 // MySQL password

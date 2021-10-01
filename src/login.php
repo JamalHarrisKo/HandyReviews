@@ -1,5 +1,5 @@
 <?php session_start();
-$servername = 'testproject_db_1';
+$servername = 'handyreviews_db_1';
 $username = 'root';
 $password = 'root';
 $dbname = "testdb_two";

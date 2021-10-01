@@ -9,15 +9,15 @@ include "Assets/header.php" ?>
     <h4>Noch keinen Account:</h4>
         <div class="input-group flex-nowrap">
             <span class="input-group-text" id="name">Name:</span>
-            <input type="text" name="name" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="name">
+            <input type="text" name="name" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="name" required>
         </div>
         <div class="input-group flex-nowrap">
             <span class="input-group-text" id="email">Email:</span>
-            <input type="text" name="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="email">
+            <input type="text" name="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="email" required>
         </div>
         <div class="input-group flex-nowrap">
             <span class="input-group-text" id="password">Password:</span>
-            <input type="password" name="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="password">
+            <input type="password" name="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="password" required>
         </div>
         <button type="submit" name="submit" class="btn btn-register btn-primary">Registrieren</button>
     </form>
@@ -27,11 +27,11 @@ include "Assets/header.php" ?>
         <h4>Bestehenden Login verwenden:</h4>
         <div class="input-group flex-nowrap">
             <span class="input-group-text" id="email">Email:</span>
-            <input type="text" name="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="email">
+            <input type="text" name="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="email" required>
         </div>
         <div class="input-group flex-nowrap">
             <span class="input-group-text" id="password">Password:</span>
-            <input type="password" name="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="password">
+            <input type="password" name="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="password" required>
         </div>
         <button type="submit" name="submit" class="btn btn-register btn-primary">Login</button>
     </form>

@@ -16,16 +16,18 @@ if (isset($_POST['submit'])) {
         $stmt->bind_param("s", $umail);
         $stmt->execute();
         $result = $stmt->get_result();
-        if ($result) {
+        $result_array = $result->fetch_assoc();
+        if ($result_array) { 
             foreach($result as $r){
                 if($r['user_pw'] == $upw){
-                    //echo('good Data: success'); ---- WORKS
                     $_SESSION['user'] = $r['user_name'];
                     $_SESSION['id'] = $r['user_id'];
                 }else{
-                    echo('bad Login data:Login failed'); 
+                    echo('Das Passwort stimmt nicht mit der Email überein...'); exit;
                 }
             }
+        }else{
+            echo('Fehler, für diese Email wurde noch kein Account angelegt...');exit;
         }
     }
 

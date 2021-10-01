@@ -38,7 +38,7 @@ foreach ($result as $product) {
 
         <form class='reviewsubmit' action='productReviewSubmit.php' method='POST'>
             <input type='hidden' name='product_id' value='<?= $product_id ?>'>
-            <textarea rows='15' name='review_content' class='review_input' placeholder='Write you review here...'></textarea>
+            <textarea rows='15' name='review_content' class='review_input' placeholder='Write you review here...' required></textarea>
             <div class='center-div'>
                 <button type='submit' name='submit' class='btn btn-primary btn-center btn-review'>Review veröffentlichen</button>
             </div>

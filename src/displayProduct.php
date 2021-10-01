@@ -37,6 +37,7 @@ $stmt_result = $stmt->get_result();
       </form>
       <br>
     </div>
-  <?php } ?>
-  <!--Content end-->
-  <?php include "Assets/footer.php" ?>
+</div>
+<?php } ?>
+<!--Content end-->
+<?php include "Assets/footer.php" ?>

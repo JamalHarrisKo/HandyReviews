@@ -2,8 +2,9 @@
 <?php include "Assets/header.php" ?>
 <!--Content-->
 <h1>Handy Review Forum</h1>
-<div class="content-wrapper">
 
+<div class="content-wrapper">
+    <hr>
     <div class="flexdiv">
         <div class="card" style="width: 18rem;">
             <img src="./Public/login.png" class="card-img-top" alt="...">

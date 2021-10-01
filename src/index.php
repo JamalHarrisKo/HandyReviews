@@ -30,14 +30,16 @@
             </div>
         </div>
     </div>
-    <hr>
-    <form class="dbupdate" action="updateDB.php" method="post">
-        <button type="submit" name="updatebutton" class="btn btn-primary">Update DB</button>
-    </form>
-    <hr>
-    <form class="dbflush" action="flushDB.php" method="post">
-        <button type="submit" name="updatebutton" class="btn btn-primary">Flush DB</button>
-    </form>
+    <div class="db_buttons">
+        <h5>DB Operations</h5>
+        <form class="dbupdate" action="updateDB.php" method="post">
+            <button type="submit" name="updatebutton" class="btn btn-primary">Update DB</button>
+        </form>
+        <hr>
+        <form class="dbflush" action="flushDB.php" method="post">
+            <button type="submit" name="updatebutton" class="btn btn-primary">Flush DB</button>
+        </form>
+    </div>
 </div>
 
 

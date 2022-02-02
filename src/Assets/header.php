@@ -30,6 +30,14 @@
         <li class="nav-item">
           <a class="nav-link" href="/displayProduct.php">Produkte Anzeigen</a>
         </li>
+        <li class="nav-item">
+          <form class="search_products" action="/search.php" method="post">
+            <input type="text" id="searchterm" name="searchterm">
+            <input type="submit" name="submit" class="btn btn-primary" href="/search.php">Suchen</input>
+          </form>
+          
+        </li>
+        
 
       </ul>
 

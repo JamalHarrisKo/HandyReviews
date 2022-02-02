@@ -42,22 +42,65 @@ foreach ($result as $product) {
             $categorie_names[] = $cr['categorie_name'];
         }
     };
+    //preiskategorien
+
+    // Id's
+    $stmt = $conn->prepare("SELECT * FROM products_price_categories wHERE product_id=?");
+    $stmt->bind_param('i', $product_id);
+    $stmt->execute();
+    $price_cat_result = $stmt->get_result();
+    $price_categorie_ids = [];
+    $price_categorie_names = [];
+    foreach ($price_cat_result as $pro_cat) {
+        $price_categorie_ids[] = $pro_cat['price_categorie_id'];
+    }
+    // Namen
+    foreach ($price_categorie_ids as $cat_id) {
+        $stmt = $conn->prepare("SELECT * FROM price_categories WHERE price_categorie_id=?");
+        $stmt->bind_param("i", $cat_id);
+        $stmt->execute();
+        $cat_result = $stmt->get_result();
+        foreach ($cat_result as $cr) {
+            $price_categorie_names[] = $cr['price_categorie_name'];
+        }
+    };
+
     $name = $product['product_name'];
     $description = $product['product_description'];
     $image = $product['product_image'];
+    //new
+    $image_back = $product['product_image_backside'];
+    $screensize = $product['product_screensize'];
+    $resoltution = $product['product_screen_resolution'];
+    $weight = $product['product_weight'];
+    $company_info = $product['product_company_info'];
 }
 ?>
 <div class='product'>
     <h3 class='product_title'><?= $name ?></h3>
     <br>
     <img src="<?= $image ?>" class='product_image--list'>
+    <img src="<?= $image_back ?>" class='product_image--back'>
     <p class='product_description'><?= htmlspecialchars($description) ?></p>
+    <ul class= "product__information">
+        <li class="product__information__single">Bildschirmgröße: <?=$screensize?></li>
+        <li class="product__information__single">Bildschirmauflösung: <?=$resoltution?></li>
+        <li class="product__information__single">Gewicht: <?=$weight?></li>
+        <li class="product__information__single"><a class="btn btn-primary" href="<?=$company_info?>">Herstellerinfos</a></li>
+    </ul>
     <div class='product_categorie'>
         <h5>Kategorien: &nbsp</h5>
         <?php foreach ($categorie_names as $cn) { ?>
             <p><?= $cn ?>;&nbsp</p>
         <?php } ?>
         <?php if (!$categorie_names) { ?>
+            <p>Keine Angaben</p>
+        <?php } ?>
+        <h5>Preisklasse: &nbsp</h5>
+        <?php foreach ($price_categorie_names as $cn) { ?>
+            <p><?= $cn ?>;&nbsp</p>
+        <?php } ?>
+        <?php if (!$price_categorie_names) { ?>
             <p>Keine Angaben</p>
         <?php } ?>
     </div>
@@ -188,9 +231,6 @@ foreach ($result as $review_result) {
     }}
     ?>
 <?php
-
-
-
 ?>
 
 

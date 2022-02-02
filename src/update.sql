@@ -12,9 +12,14 @@ CREATE TABLE IF NOT EXISTS products (
     product_name varchar(50) NOT NULL DEFAULT '',
     product_price varchar (7) NOT NULL DEFAULT '$',
     product_image varchar(255) NOT NULL DEFAULT'',
+    product_image_backside varchar(255) NOT NULL DEFAULT'',
+    product_screensize varchar(255) NOT NULL DEFAULT'',
+    product_screen_resolution varchar(255) NOT NULL DEFAULT'',
+    product_weight varchar(255) NOT NULL DEFAULT'',
+    product_company_info varchar(255) NOT NULL DEFAULT'',
     product_description TEXT (1000) NOT NULL,
     PRIMARY KEY (product_id)
-);
+);  
 CREATE TABLE IF NOT EXISTS reviews (
     review_id int(10) NOT NULL AUTO_INCREMENT,
     review_content TEXT (1000),
@@ -55,18 +60,32 @@ CREATE TABLE IF NOT EXISTS categories(
     categorie_name varchar (15),
     PRIMARY KEY (categorie_id)  
 );
+CREATE TABLE IF NOT EXISTS price_categories(
+    price_categorie_id int (10) AUTO_INCREMENT,
+    price_categorie_name varchar (15),
+    PRIMARY KEY (price_categorie_id)  
+);
 CREATE TABLE IF NOT EXISTS products_categories (
     product_id int(10),
     categorie_id int (10),
     FOREIGN KEY (product_id) REFERENCES products(product_id),
     FOREIGN KEY (categorie_id) REFERENCES categories(categorie_id)
 );
-
+CREATE TABLE IF NOT EXISTS products_price_categories (
+    product_id int(10),
+    price_categorie_id int (10),
+    FOREIGN KEY (product_id) REFERENCES products(product_id),
+    FOREIGN KEY (price_categorie_id) REFERENCES price_categories(price_categorie_id)
+);
 INSERT INTO rating_values(rating_value_id, rating_value_value, rating_value_name)
 VALUES (1, 5, '5 Sterne'), (2, 4, '4 Sterne'), (3, 3, '3 Sterne'), (4, 2, '2 Sterne'), (5, 1, '1 Stern');
 
 INSERT INTO categories(categorie_name)
 VALUES ('Apple'), ('Samsung'), ('Google'), ('Mobile'), ('Tablet'), ('Andere');
+
+INSERT INTO price_categories(price_categorie_name)
+VALUES ('Einsteiger'), ('Mid-Range'), ('High-End');
+
 
 
 

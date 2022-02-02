@@ -1,6 +1,9 @@
 USE testdb_two;
+DROP TABLE IF EXISTS products_price_categories;
 DROP TABLE IF EXISTS products_categories;
 DROP TABLE IF EXISTS categories;
+DROP TABLE IF EXISTS price_categories;
+
 DROP TABLE if EXISTS ratings;
 DROP TABLE if EXISTS  comments;
 DROP TABLE if EXISTS reviews;

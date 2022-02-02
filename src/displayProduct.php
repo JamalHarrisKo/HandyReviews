@@ -15,7 +15,7 @@ $stmt = $conn->prepare("SELECT * FROM products");
 $stmt->execute();
 $stmt_result = $stmt->get_result();
 ?>
-<div class=product_list>
+<div class="product_list">
   <!--fuer jedes produkt werte auslesen und ausgeben-->
   <?php foreach ($stmt_result as $product) {
     $name = $product['product_name'];
@@ -37,7 +37,8 @@ $stmt_result = $stmt->get_result();
       </form>
       <br>
     </div>
+    <?php } ?>
 </div>
-<?php } ?>
+
 <!--Content end-->
 <?php include "Assets/footer.php" ?>

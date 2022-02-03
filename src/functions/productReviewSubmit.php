@@ -21,5 +21,5 @@ if (isset($_POST['submit'])){
     echo "Error: " . $sql . ":-" . mysqli_error($conn);
     }
     mysqli_close($conn);
-    header("Location: displayProduct.php");
+    header("Location: /pages/displayProduct.php");
 }

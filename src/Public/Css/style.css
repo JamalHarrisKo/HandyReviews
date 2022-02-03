@@ -59,12 +59,14 @@ html, body{
     margin: 10px 0;
 }
 .product_image--list{
-    width: 300px;
+    width: auto;
+    height: 300px;
     float: left;
     padding: 15px;
 }
 .product_image--back{
-    width: 300px;
+    width: auto;
+    height: 300px;
     float: left;
     padding: 15px;
 }
@@ -79,6 +81,7 @@ html, body{
 }
 .center-div{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 .product_image--review{
@@ -124,6 +127,7 @@ html, body{
 }
 .product_categorie{
     display: flex;
+    flex-wrap: wrap;
 }
 .review_text{
     padding: 10px 0;

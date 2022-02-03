@@ -1,5 +1,5 @@
 <?php session_start();
-include "Assets/header.php" ?>
+include "../Assets/header.php" ?>
 <!--Content-->
 <?php
 
@@ -161,7 +161,7 @@ foreach ($result as $review_result) {
     }
 ?>
         <p class='review_text'>Review by: <strong><?= $user_name ?></strong><br><?= $review_result['review_content'] ?></p>
-        <form class='rating' action='rate.php' method='POST'>
+        <form class='rating' action='/functions/rate.php' method='POST'>
             <select id='rating_select' name='rating_select'>
                 <option name='one' value=1>1 Stern</option>
                 <option name='two' value=2>2 Sterne</option>
@@ -183,7 +183,7 @@ foreach ($result as $review_result) {
     
     ?>
     <h6>Kommentar verfassen:</h6>
-    <form class='comment_form' action='comment.php' method='POST'>
+    <form class='comment_form' action='/functions/comment.php' method='POST'>
         <textarea class='comment_text' rows='10' name='comment_content' required></textarea>
         <input type='hidden' name='review_id' value='<?= $review_id ?>'>
         <button type='submit' name='submit'>Kommentar veröffentlichen</button>
@@ -235,4 +235,4 @@ foreach ($result as $review_result) {
 
 
 <!--Content end-->
-<?php include "Assets/footer.php" ?>
+<?php include "../Assets/footer.php" ?>

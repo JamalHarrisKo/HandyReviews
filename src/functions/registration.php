@@ -35,5 +35,5 @@ if (isset($_POST['submit'])) {
         echo "Error: " . $sql . ":-" . mysqli_error($conn);
     }
     mysqli_close($conn);
-    header("Location: index.php");
+    header("Location: ../index.php");
 }

@@ -1,7 +1,7 @@
 <?php session_start();
 
 if(!$_SESSION['user']){
-include "Assets/header.php";
+include "../Assets/header.php";
 ?>    
 <div class="login_required"><h4>Um diese Funktion zu nutzten melden sie sich bitte <a href="register.php">hier</a> an, oder gehen sie zurueck zur <a href="displayProduct.php">Produktübersicht</a></h4></div>
 <?php exit;
@@ -27,5 +27,5 @@ if (isset($_POST['submit'])) {
         echo "Error: " . $sql . ":-" . mysqli_error($conn);
     }
     mysqli_close($conn);
-    header("Location: displayProduct.php");
+    header("Location: /pages/displayProduct.php");
 }

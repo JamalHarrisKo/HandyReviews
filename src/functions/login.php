@@ -32,7 +32,7 @@ if (isset($_POST['submit'])) {
     }
 
     mysqli_close($conn);
-    header("Location: index.php");
+    header("Location: ../index.php");
 
 
 ?>

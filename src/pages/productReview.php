@@ -1,5 +1,5 @@
 <?php session_start();
- include "Assets/header.php"; 
+ include "../Assets/header.php"; 
  if(!$_SESSION['user']){
 ?>    
 <div class="login_required"><h4>Um diese Funktion zu nutzten melden sie sich bitte <a href="register.php">hier</a> an, oder gehen sie zurueck zur <a href="displayProduct.php">Produktübersicht</a></h4></div>
@@ -36,7 +36,7 @@ foreach ($result as $product) {
             <img src=<?= $image ?> class='product_image--review'>
         </div>
 
-        <form class='reviewsubmit' action='productReviewSubmit.php' method='POST'>
+        <form class='reviewsubmit' action='/functions/productReviewSubmit.php' method='POST'>
             <input type='hidden' name='product_id' value='<?= $product_id ?>'>
             <textarea rows='15' name='review_content' class='review_input' placeholder='Write you review here...' required></textarea>
             <div class='center-div'>
@@ -51,4 +51,4 @@ foreach ($result as $product) {
 
 
 <!--Content end-->
-<?php include "Assets/footer.php" ?>
+<?php include "../Assets/footer.php" ?>

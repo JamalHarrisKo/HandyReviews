@@ -22,16 +22,16 @@
           <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/register.php">Register/Login</a>
+          <a class="nav-link" href="/pages/register.php">Register/Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/createNewProduct.php">Neues Produkt Hinzufügen</a>
+          <a class="nav-link" href="/pages/createNewProduct.php">Neues Produkt Hinzufügen</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/displayProduct.php">Produkte Anzeigen</a>
+          <a class="nav-link" href="/pages/displayProduct.php">Produkte Anzeigen</a>
         </li>
         <li class="nav-item">
-          <form class="search_products" action="/search.php" method="post">
+          <form class="search_products" action="/pages/search.php" method="post">
             <input type="text" id="searchterm" name="searchterm">
             <input type="submit" value="Suchen" name="submit" class="btn btn-primary" href="/search.php"></input>
           </form>

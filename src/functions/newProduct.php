@@ -66,5 +66,5 @@ if (isset($_POST['submit'])) {
     }
 
     mysqli_close($conn);
-    header("Location: displayProduct.php");
+    header("Location: /pages/displayProduct.php");
 }

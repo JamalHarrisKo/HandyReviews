@@ -1,5 +1,5 @@
 <?php session_start();
-include "Assets/header.php"; ?>
+include "../Assets/header.php"; ?>
 <!--Content-->
 <?php
 $servername = 'db';
@@ -41,4 +41,4 @@ $stmt_result = $stmt->get_result();
 </div>
 
 <!--Content end-->
-<?php include "Assets/footer.php" ?>
+<?php include "../Assets/footer.php" ?>

@@ -1,5 +1,5 @@
 <?php session_start();
-include "Assets/header.php" ?>
+include "../Assets/header.php" ?>
 <!--Content-->
 <?php
     if (isset($_POST['submit'])){
@@ -123,4 +123,4 @@ endforeach;
 
 
 <!--Content end-->
-<?php include "Assets/footer.php" ?>
+<?php include "../Assets/footer.php" ?>

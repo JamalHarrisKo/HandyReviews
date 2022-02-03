@@ -1,11 +1,11 @@
 <?php session_start();
-include "Assets/header.php" ?>
+include "../Assets/header.php" ?>
 <!--Content-->
 
 <div class="content-wrapper">
 <?php if(!$_SESSION['user']){ ?>
     
-    <form class="registration" action="registration.php" method="post">
+    <form class="registration" action="/functions/registration.php" method="post">
     <h4>Noch keinen Account:</h4>
         <div class="input-group flex-nowrap">
             <span class="input-group-text" id="name">Name:</span>
@@ -23,7 +23,7 @@ include "Assets/header.php" ?>
     </form>
     <hr>
     
-    <form class="registration" action="login.php" method="post">
+    <form class="registration" action="/functions/login.php" method="post">
         <h4>Bestehenden Login verwenden:</h4>
         <div class="input-group flex-nowrap">
             <span class="input-group-text" id="email">Email:</span>
@@ -39,11 +39,11 @@ include "Assets/header.php" ?>
 <?php } ?>
 <?php if($_SESSION['user']){ ?>
  
-    <form class="Logout" action="logout.php" method="post">
+    <form class="Logout" action="/functions/logout.php" method="post">
         <button type="submit" name="logoutbutton" class="btn btn-primary">Logout</button>
     </form>
 <?php } ?>
 </div>
 
 <!--Content end-->
-<?php include "Assets/footer.php" ?>
+<?php include "../Assets/footer.php" ?>

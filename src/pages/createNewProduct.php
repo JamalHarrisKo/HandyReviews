@@ -1,5 +1,5 @@
 <?php session_start();
-include "Assets/header.php";
+include "../Assets/header.php";
 if(!$_SESSION['user']){
 ?>    
 <div class="login_required"><h4>Um diese Funktion zu nutzten melden sie sich bitte <a href="register.php">hier</a> an, oder gehen sie zurueck zur <a href="displayProduct.php">Produktübersicht</a></h4></div>
@@ -32,7 +32,7 @@ foreach ($stmt_result as $r) {
 }
 
 ?>
-<form class="newProductForm" action="newProduct.php" method="POST">
+<form class="newProductForm" action="/functions/newProduct.php" method="POST">
     <!--Name-->
     <div class="input-group flex-nowrap">
         <span class="input-group-text" id="product_name">Proukt-Name:</span>
@@ -99,4 +99,4 @@ foreach ($stmt_result as $r) {
 </form>
 
 <!----END----->
-<?php include "Assets/footer.php" ?>
+<?php include "../Assets/footer.php" ?>

@@ -1,4 +1,4 @@
 <?php session_start();
 session_destroy();
-header("Location: register.php");
+header("Location: ../pages/register.php");
 ?>

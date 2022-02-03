@@ -33,7 +33,7 @@
         <li class="nav-item">
           <form class="search_products" action="/search.php" method="post">
             <input type="text" id="searchterm" name="searchterm">
-            <input type="submit" name="submit" class="btn btn-primary" href="/search.php">Suchen</input>
+            <input type="submit" value="Suchen" name="submit" class="btn btn-primary" href="/search.php"></input>
           </form>
           
         </li>

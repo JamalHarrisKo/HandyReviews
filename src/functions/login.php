@@ -2,7 +2,7 @@
 $servername = 'handyreviews_db_1';
 $username = 'root';
 $password = 'root';
-$dbname = "testdb_two";
+$dbname = "smartphoneportal_JamalHarris";
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
     die('Could not Connect MySql Server:' . mysqli_error($conn));

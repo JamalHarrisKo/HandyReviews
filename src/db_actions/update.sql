@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS testdb_two;
-USE testdb_two;
+CREATE DATABASE IF NOT EXISTS smartphoneportal_JamalHarris;
+USE smartphoneportal_JamalHarris;
 CREATE TABLE IF NOT EXISTS users (
     user_id int(10) NOT NULL AUTO_INCREMENT,
     user_mail varchar(50) UNIQUE NOT NULL DEFAULT 'user@example.com',

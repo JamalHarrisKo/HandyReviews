@@ -8,7 +8,7 @@ $mysqlUser = 'root';
 // MySQL password
 $mysqlPassword = 'root';
 // Database name
-$mysqlDatabase = 'testdb_two';
+$mysqlDatabase = 'smartphoneportal_JamalHarris';
 
 // Connect to MySQL server
 $link = mysqli_connect($mysqlHost, $mysqlUser, $mysqlPassword) or die('Error connecting to MySQL Database: ' . mysqli_error($link));
@@ -34,4 +34,4 @@ foreach ($lines as $line) {
 }
  //echo "Tables imported successfully";
 mysqli_close($link);
-header("Location: register.php");
+header("Location: /pages/register.php");

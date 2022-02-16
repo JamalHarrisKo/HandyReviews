@@ -8,7 +8,7 @@ $mysqlUser = 'root';
 // MySQL password
 $mysqlPassword = 'root';
 // Database name
-$mysqlDatabase = 'testdb_two';
+$mysqlDatabase = 'smartphoneportal_JamalHarris';
 
 // Connect to MySQL server
 $link = mysqli_connect($mysqlHost, $mysqlUser, $mysqlPassword) or die('Error connecting to MySQL Database: ' . mysqli_error());

@@ -1,4 +1,4 @@
-USE testdb_two;
+USE smartphoneportal_JamalHarris;
 DROP TABLE IF EXISTS products_price_categories;
 DROP TABLE IF EXISTS products_categories;
 DROP TABLE IF EXISTS categories;

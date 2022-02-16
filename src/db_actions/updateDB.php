@@ -37,4 +37,4 @@ foreach ($lines as $line) {
 }
  //echo "Tables imported successfully";
  mysqli_close($link);
- header("Location: register.php");
+ header("Location: /pages/register.php");
